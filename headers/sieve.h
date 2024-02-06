@@ -11,6 +11,7 @@ public:
   ~Entry() = default;
 
   bool is_marked();
+  size_t get_num();
   void mark();
 
 private:
@@ -26,6 +27,8 @@ public:
   Sieve &operator=(Sieve &&) = default;
   Sieve &operator=(const Sieve &) = default;
   ~Sieve() = default;
+
+  std::vector<size_t> find_primes();
 
 private:
   std::vector<Entry> nums;

@@ -3,9 +3,12 @@
 #include <string>
 
 int main(void) {
-  std::cout << "Hello World" << std::endl;
+  Sieve s = Sieve(100);
 
-  Sieve s = Sieve(10);
+  std::cout << '\n';
+  for (auto i : s.find_primes())
+    std::cout << i << " ";
+  std::cout << std::endl;
 
   return 0;
 }
