@@ -1,10 +1,22 @@
 #include <string>
 #include <vector>
 
-typedef struct {
+class Entry {
+public:
+  Entry(size_t num = 0);
+  Entry(Entry &&) = default;
+  Entry(const Entry &) = default;
+  Entry &operator=(Entry &&) = default;
+  Entry &operator=(const Entry &) = default;
+  ~Entry() = default;
+
+  bool is_marked();
+  void mark();
+
+private:
   size_t num;
   bool marked;
-} Entry;
+};
 
 class Sieve {
 public:
