@@ -10,9 +10,9 @@ public:
   Entry &operator=(const Entry &) = default;
   ~Entry() = default;
 
-  bool is_marked();
-  size_t get_num();
-  void mark();
+  inline bool is_marked();
+  inline size_t get_num();
+  inline void mark();
 
 private:
   size_t num;

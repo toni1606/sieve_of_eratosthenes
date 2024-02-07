@@ -6,6 +6,7 @@ void Entry::mark() { marked = true; }
 size_t Entry::get_num() { return num; }
 
 Sieve::Sieve(size_t upper_bound) : nums() {
+  nums.reserve(upper_bound);
   for (size_t i = 2; i <= upper_bound; i++) {
     nums.push_back(Entry(i));
   }

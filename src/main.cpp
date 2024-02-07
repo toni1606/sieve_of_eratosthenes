@@ -3,12 +3,9 @@
 #include <string>
 
 int main(void) {
-  Sieve s = Sieve(100);
+  Sieve s = Sieve(100'000'000);
 
-  std::cout << '\n';
-  for (auto i : s.find_primes())
-    std::cout << i << " ";
-  std::cout << std::endl;
+  std::cout << s.find_primes().size() << std::endl;
 
   return 0;
 }
